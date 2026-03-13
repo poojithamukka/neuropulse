@@ -85,6 +85,7 @@ export default function PatientDashboard() {
             { id: 'overview', icon: '🏠', label: 'Overview' },
             { id: 'medipass', icon: '🏥', label: 'MediPass' },
             { id: 'screening', icon: '🧠', label: 'NeuroScan' },
+            { id: 'games', icon: '🎮', label: 'Brain Games' },
             { id: 'results', icon: '📊', label: 'My Results' },
             { id: 'appointments', icon: '📅', label: 'Appointments' },
             { id: 'history', icon: '📋', label: 'Medical History' },
@@ -95,6 +96,7 @@ export default function PatientDashboard() {
                 if (item.id === 'medipass') navigate('/medipass');
                 else if (item.id === 'screening') navigate('/screening');
                 else if (item.id === 'results') navigate('/results');
+                else if (item.id === 'games') navigate('/games');
                 else setActiveTab(item.id);
               }}
               className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition text-left ${
@@ -205,9 +207,10 @@ export default function PatientDashboard() {
             )}
 
             {/* Quick Actions */}
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-4 gap-4">
               {[
                 { icon: '🧠', title: 'Start NeuroScan', desc: 'Take neurological screening tests', action: () => navigate('/screening'), gradient: true },
+                { icon: '🎮', title: 'Brain Games', desc: 'Memory training & cognitive exercises', action: () => navigate('/games'), gradient: false },
                 { icon: '🏥', title: 'Open MediPass', desc: 'View your digital health passport', action: () => navigate('/medipass'), gradient: false },
                 { icon: '📊', title: 'View Reports', desc: 'See detailed test results & graphs', action: () => navigate('/results'), gradient: false },
               ].map((item, i) => (
