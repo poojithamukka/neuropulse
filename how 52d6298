@@ -1,0 +1,17 @@
+[33mcommit cd6dba3a6b4386b1f95f05f10c91df4a19d6f48c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: poojithamukka <mukkapoojitha@gmail.com>
+Date:   Thu Mar 12 16:50:02 2026 +0530
+
+    Updated screening fixes, cognitive games, chatbot fixes
+
+[33mcommit 52d6298ac59f14c83bd907f73b40545d77d674b9[m
+Author: poojithamukka <mukkapoojitha@gmail.com>
+Date:   Thu Mar 12 10:49:03 2026 +0530
+
+    Initial commit of NeuroPulse project
+
+[33mcommit 1ce6784aa2d426efae918ec35e8ce9bb5e9894cc[m
+Author: poojithamukka <mukkapoojitha@gmail.com>
+Date:   Wed Mar 11 19:57:53 2026 +0530
+
+    Initialize project using Create React App
