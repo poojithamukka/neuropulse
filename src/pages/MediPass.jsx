@@ -105,15 +105,7 @@ export default function MediPass() {
     toast.success('Record deleted!');
   }
 
-  const qrData = JSON.stringify({
-    id: currentUser?.uid,
-    name: userData?.name,
-    bloodGroup: userData?.bloodGroup,
-    allergies: userData?.allergies,
-    conditions: userData?.conditions,
-    emergencyContact: userData?.emergencyContact,
-    emergencyPhone: userData?.emergencyPhone,
-  });
+  const qrData = window.location.origin + '/patient-profile/' + currentUser?.uid;
 
   if (loading) {
     return (

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
- 
+
 import Landing from './pages/Landing';
 import Login from './pages/Login';
 import Register from './pages/Register';
@@ -13,7 +13,8 @@ import MediPass from './pages/MediPass';
 import Screening from './pages/Screening';
 import Results from './pages/Results';
 import MemoryGames from './pages/MemoryGames';
- 
+import PatientProfile from './pages/PatientProfile';
+
 function PrivateRoute({ children, role }) {
   const { currentUser, userRole, loading } = useAuth();
   if (loading) return (
@@ -27,7 +28,7 @@ function PrivateRoute({ children, role }) {
   if (role && userRole !== role) return <Navigate to="/login" />;
   return children;
 }
- 
+
 function App() {
   return (
     <AuthProvider>
@@ -67,6 +68,7 @@ function App() {
                 <MemoryGames />
               </PrivateRoute>
             } />
+            <Route path="/patient-profile/:patientId" element={<PatientProfile />} />
           </Routes>
         </div>
         <ToastContainer
@@ -79,5 +81,5 @@ function App() {
     </AuthProvider>
   );
 }
- 
+
 export default App;
